@@ -1,0 +1,19 @@
+{
+  "name": "stooq-quote-fetcher",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fetch latest quote data from stooq.com via HTTP or Playwright; output JSON or table.",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "bin": {
+    "stooq-quote": "bin/stooq-quote.js"
+  },
+  "scripts": {
+    "lint": "node -c bin/stooq-quote.js && node -c src/stooq/http.js && node -c src/stooq/playwright.js && node -c src/stooq/parse.js && node -c src/stooq/format.js"
+  },
+  "dependencies": {
+    "cli-table3": "^0.6.5",
+    "commander": "^14.0.0",
+    "playwright": "^1.55.0"
+  }
+}
